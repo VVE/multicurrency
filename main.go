@@ -25,7 +25,7 @@ const natCurName = "RUB" // national currency name (may be "USDT",..)
 const natCurSymbol = "₽" // national currency symbol (may be "$",..)
 
 func getToken() string {
-	return "set the token"
+	return "1951162952:AAGZGFKqvl0g46PA85wID5jpxTsBvmHaKYQ"
 }
 
 func getRate(cur string) (float64, error) {
@@ -120,14 +120,20 @@ func main() {
 				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "You have no amout"))
 				continue
 			}
-			//res = ""
+			var total float64
+			var amount float64
 			for cur, fval := range db[userId] {
 				rate, err := getRate(cur)
 				if err != nil {
 					bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
 					continue
 				}
-				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("%s: %.2f %s%.02f (rate %.02f)\n", cur, fval, natCurSymbol, fval*rate, rate)))
+				amount = fval * rate
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("%s: %.2f %s%.02f (rate %.02f)\n", cur, fval, natCurSymbol, amount, rate)))
+				total += amount
+			}
+			if total < 0.01 {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "You have no amout"))
 			}
 		default:
 			bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "command code: "+command[0]+" is wrong"))
