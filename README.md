@@ -21,6 +21,7 @@ Here:
 
 The exchange rates are obtained from binance.com using the API:
 * Request is like: https://api.binance.com/api/v3/ticker/price?symbol=BTCRUB
+
 Here the first 3 characters in the symbol parameter are the cryptocurrency code (BTC is bitcoin, ETH is ethereum),
 the second 3 characters are the code of the currency in which we are evaluating.
 * Response is like: {"symbol":"BTCRUB","price":"3640630.00000000"}
