@@ -25,7 +25,7 @@ const natCurName = "RUB" // national currency name (may be "USDT",..)
 const natCurSymbol = "₽" // national currency symbol (may be "$",..)
 
 func getToken() string {
-	return "1951162952:AAGZGFKqvl0g46PA85wID5jpxTsBvmHaKYQ"
+	return "set the token"
 }
 
 func getRate(cur string) (float64, error) {
