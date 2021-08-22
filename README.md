@@ -10,10 +10,10 @@ Customers can:
 The bot does not conduct real money transactions and does not serve currency conversions.
 
 To do this, they enter the following commands:
-`ADD <currency name> <amount>` - add the amount,
-`SUB <currency name> <amount>` - withdraw the amount,
-`SHOW` – show balance,
-`DEL <currency name>` - delete the currency.
+* `ADD <currency name> <amount>` - add the amount,
+* `SUB <currency name> <amount>` - withdraw the amount,
+* `SHOW` – show balance,
+* `DEL <currency name>` - delete the currency.
 
 Here:
 <currency name> is cryptocurrency code,
