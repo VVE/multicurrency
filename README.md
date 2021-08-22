@@ -29,6 +29,8 @@ The bot is not case sensitive.
 
 The balance for each cryptocurrency is displayed in units of this cryptocurrency and in rubles, indicating the current exchange rate for reference.
 
+The Russian currency can be replaced with another by replacing constants.
+
 If the balance is insufficient for withdrawal, the bot reports this.
 
 The bot does not allow you to delete cryptocurrency with a non-zero balance.
