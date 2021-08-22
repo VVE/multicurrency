@@ -19,6 +19,11 @@ Here:
 <currency name> is cryptocurrency code,
 <amount> is the amount in cryptocurrency.
 
+The exchange rates are obtained from binance.com using the API:
+Request: https://api.binance.com/api/v3/ticker/price?symbol=BTCRUB
+Here the first 3 characters in the symbol parameter are the cryptocurrency code (BTC is bitcoin, ETH is ethereum),
+the second 3 characters are the code of the currency in which we are evaluating.
+Response: {"symbol":"BTCRUB","price":"3640630.00000000"}
 
 The bot is not case sensitive.
 
@@ -59,8 +64,5 @@ Here:
 `<currency code>` is a string,
 `<sum>` is a non-negative real number.
 
-The exchange rates are obtained from binance.com using the API:
-Request: https://api.binance.com/api/v3/ticker/price?symbol=BTCRUB
-Here the first 3 characters in the symbol parameter are the cryptocurrency code (BTC is bitcoin, ETH is ethereum),
-the second 3 characters are the code of the currency in which we are evaluating.
-Response: {"symbol":"BTCRUB","price":"3640630.00000000"}
+The bot was created under the leadership of Valeriy Kabisov, Senior Golang Developer, during a 3-day intensive training, organized by Skillbox on August 19-21, 2021.
+
